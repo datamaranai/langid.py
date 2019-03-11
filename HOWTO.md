@@ -1,5 +1,7 @@
 ## Build and run the container
 
+On the `development` branch.
+
 Set env vars:
 
 $ export LANGID_VERSION=0.0.2
@@ -10,7 +12,7 @@ Build the container:
 
 $ docker build -t langid:$LANGID_VERSION .
 
-Run: add -d to run in background
+Run: add -d to run in background. Remembet to have an outbound rule in aws at $LANGID_PORT to your public IP address!
 
 $ docker run --name langid -d -p 9008:$LANGID_PORT --rm langid:$LANGID_VERSION
 
