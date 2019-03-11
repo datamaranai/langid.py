@@ -10,7 +10,7 @@ Build the container:
 
 $ docker build -t langid:$LANGID_VERSION .
 
-Run: remove the -d to run in background
+Run: add -d to run in background
 
 $ docker run --name langid -d -p 9008:$LANGID_PORT --rm langid:$LANGID_VERSION
 
