@@ -12,6 +12,10 @@ Build the container:
 
 $ docker build -t langid:$LANGID_VERSION .
 
+If your code doesn't update, you might need to change the above command to:
+
+$ docker build --no-cache -t langid:$LANGID_VERSION .
+
 Run: add -d to run in background. Remembet to have an outbound rule in aws at $LANGID_PORT to your public IP address!
 
 $ docker run --name langid -d -p 9008:$LANGID_PORT --rm langid:$LANGID_VERSION
